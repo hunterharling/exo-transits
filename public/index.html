@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exo Transits</title>
+    <meta name="description" content="Exo Transits is a web app that allows astronomers and exoplanet researchers to plan upcoming exoplanet observations."/>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="theme-color" content="#141414">
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="shortcut icon" href="/static/logo128r.png" />
+	  <link rel="apple-touch-icon" href="/static/logo192.png"/>
+
+    <link rel="stylesheet" href="https://aladin.u-strasbg.fr/AladinLite/api/v2/latest/aladin.min.css" />
+    <script src="/jquery.js"></script>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+
+    <script type="text/javascript" src="https://aladin.u-strasbg.fr/AladinLite/api/v2/latest/aladin.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      window.setTimeout(() => {
+        if(document.getElementsByClassName("banner").length < 1){
+          caches.keys().then(function(names) {
+            for (let name of names)
+              caches.delete(name);
+          });
+          window.location.reload();
+        }
+      }, 2500);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+/* Media rules */
+@media screen and (min-width: 1200px) {
+  .banner {
+    padding: 0 14% !important;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  /* layout */
+  .banner {
+    margin: 0 auto;
+    padding: 0 10%;
+    height: 70px;
+  }
+
+  .navbar p {
+    height: 70px;
+  }
+
+  .navbar .menu__grid__container  {
+    height: 70px !important;
+  }
+
+  .h2__header {
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  /* layout */
+  .app {
+    max-width: 850px;
+    padding: 0 35px;
+  }
+
+  .banner {
+    padding: 0 60px;
+  }
+
+  /* transit */
+  .transits {
+    justify-content: space-between !important;
+  }
+
+  .transit__card {
+    min-width: 360px;
+  }
+
+  /* planner */
+  .planner__card {
+    width: 100%;
+  }
+
+  .rounded__btn {
+    width: 41px !important;
+    height: 41px !important;
+    font-size: 21px !important;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .banner {
+    margin-bottom: 25px;
+    background-color: var(--surface);
+  }
+
+  /* Transits */
+  .filters__model .input__component {
+    max-width: 650px;
+    margin: 15px auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .banner {
+    padding: 0 20px !important;
+  }
+
+  /* transit */
+  .transit__card {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .transits {
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* layout */
+  .app {
+    padding: 0 15px;
+  }
+
+  .banner {
+    padding: 0 0px !important;
+    margin-bottom: 8px;
+  }
+
+  .menu {
+    width: 100% !important;
+  }
+
+  /* transits */
+}
+
+@media screen and (max-width: 380px) {
+  // #logo__text {
+  //   display: none !important;
+  // }
+  #logo__img {
+    display: none !important;
+  }
+}
