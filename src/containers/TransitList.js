@@ -5,7 +5,7 @@ import {
   Box
 } from "@chakra-ui/react";
 import Transit from "../components/Transit/Transit";
-import { parse, POST, GET } from '../functions/post.js';
+import { parse, POST } from '../functions/post.js';
 import { Spinner, H1 } from '../library/CustomUI.js';
 import { TRANSITS_API } from '../paths.js';
 import { currentDate } from '../functions/generic.js';

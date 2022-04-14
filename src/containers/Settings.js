@@ -12,7 +12,7 @@ import {
   faEnvelope,
   faMapMarkerAlt
 } from "@fortawesome/free-solid-svg-icons";
-import { Input, Dropdown, Button, H1 } from '../library/CustomUI.js';
+import { Input, Dropdown, H1 } from '../library/CustomUI.js';
 import { POST } from '../functions/post.js';
 import * as paths from '../paths.js';
 

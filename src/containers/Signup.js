@@ -4,7 +4,7 @@ import {
   FormLabel,
   Text
 } from "@chakra-ui/react"
-import { signupUser, setLogin } from '../functions/auth.js';
+import { setLogin } from '../functions/auth.js';
 import { POST } from '../functions/post.js';
 import { LOGIN_API, SIGNUP_API } from '../paths.js';
 import { Input, Button, H1 } from '../library/CustomUI.js';
