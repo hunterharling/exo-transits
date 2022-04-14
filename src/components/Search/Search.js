@@ -9,22 +9,6 @@ import { Box, Heading } from "@chakra-ui/react";
 import { Input } from "../../library/CustomUI.js";
 import { Dropdown } from "../../library/CustomUI.js";
 
-const headingStyles = {
-  fontSize: 25,
-  mt: 15,
-  color: "secondary.300",
-  textAlign: "center",
-  fontWeight: "300",
-  mb: "0"
-};
-
-const inputAttrs = {
-  className: "transit__search",
-  type: "text",
-  backgroundColor: "main.100",
-  borderColor: "#515151"
-};
-
 class Search extends React.Component {
   // Display result info
   state = {
@@ -97,12 +81,11 @@ class Search extends React.Component {
       });
 
       // push the new list
-      if (new_list) 
+      if (new_list)
         this.props.returnTransits(new_list);
     });
   }
 
-  // Return component
   render() {
     return (
       <Box className="search__filter__section"
@@ -112,33 +95,52 @@ class Search extends React.Component {
 
         <Dropdown
           text="Filters"
-          open={false}
-        >
+          open={false}>
           <Box className="filters__model" style={{ paddingTop: "15px", marginTop: "15px" }}>
             <Input
               i={faSearch}
-              {...inputAttrs}
+              className="transit__search"
+              styles={{
+                backgroundColor: "main.100 !important",
+                borderColor: "#515151"
+              }}
+              type="text"
               onKeyUp={e => this.searchTransits({ name: (e.target.value ? e.target.value : "empty") })}
               placeholder="Name..."
             />
 
             <Input
               i={faRulerVertical}
-              {...inputAttrs}
+              className="transit__search"
+              type="text"
+              styles={{
+                backgroundColor: "main.100 !important",
+                borderColor: "#515151"
+              }}
               onKeyUp={e => this.searchTransits({ depth: (e.target.value ? e.target.value : "empty") })}
               placeholder="Min depth..."
             />
 
             <Input
               i={faPercentage}
-              {...inputAttrs}
+              className="transit__search"
+              type="text"
+              styles={{
+                backgroundColor: "main.100 !important",
+                borderColor: "#515151"
+              }}
               onKeyUp={e => this.searchTransits({ vis: (e.target.value ? e.target.value : "empty") })}
               placeholder="Min percent visible..."
             />
 
             <Input
               i={faStar}
-              {...inputAttrs}
+              className="transit__search"
+              type="text"
+              styles={{
+                backgroundColor: "main.100 !important",
+                borderColor: "#515151"
+              }}
               onKeyUp={e => this.searchTransits({ mag: (e.target.value ? e.target.value : "empty") })}
               placeholder="Max magnitude..."
             />
@@ -146,7 +148,7 @@ class Search extends React.Component {
         </Dropdown>
 
         {this.state.searchResults.query &&
-          <Heading className="search__results" {...headingStyles}>
+          <Heading className="search__results" variant="searchHeading">
             {this.state.searchResults.count}
             {'  '}
             <span style={{ color: 'white' }}>results</span>

@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react"
 
-const theme = extendTheme({
+export default extendTheme({
   colors: {
     primary: {
       50: "#e5f6ff",
@@ -27,7 +27,7 @@ const theme = extendTheme({
       900: "#150518",
     },
     surface: {
-      50: "#1e1d23", 
+      50: "#1e1d23",
       100: "#28272d", // light 
       200: "#2b2d35", // circles
       400: "#292832",
@@ -58,6 +58,18 @@ const theme = extendTheme({
       900: "#1c0103",
     },
   },
+  components: {
+    Heading: {
+      variants: {
+        searchHeading: {
+          fontSize: 25,
+          mt: 15,
+          color: "secondary.300",
+          textAlign: "center",
+          fontWeight: "300",
+          mb: "0"
+        },
+      },
+    },
+  },
 });
-
-export default theme;
