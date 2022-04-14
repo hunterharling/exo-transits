@@ -4,7 +4,7 @@ import csv
 from .models import PlannedTransit
 
 SITE_URL = "https://exotransits.com"
-SITE_LOGO = "https://astrotutorials-templates.s3.us-west-1.amazonaws.com/"
+SITE_LOGO = ""
 
 ''' Return a datetime obj from string '''
 def transit_date(date):

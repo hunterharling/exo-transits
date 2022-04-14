@@ -1,7 +1,6 @@
 # API imports
 from .serializers import (
     UserSerializer,
-    TransitDumpSerializer,
     UpcomingTransitSerializer
 )
 from .models import (
@@ -14,11 +13,10 @@ from .models import (
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.middleware.csrf import get_token
-from django.http import response, HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
-from django.utils import timezone
 from django.utils.timezone import activate
 from django.utils.html import strip_tags
 import pytz
@@ -26,29 +24,22 @@ import pytz
 # Rest imports
 from rest_framework.generics import (
     ListAPIView,
-    RetrieveAPIView,
     CreateAPIView,
-    DestroyAPIView,
     UpdateAPIView,
-    RetrieveUpdateDestroyAPIView
 )
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
 # Scraping imports
 from bs4 import BeautifulSoup
-import subprocess
 import random
 import string
 import json
 from datetime import (
     datetime,
     timedelta,
-    date
 )
-import csv
 import requests
 
 # Utils
@@ -57,7 +48,6 @@ from .utils import (
     process_csv,
     process_db_transit,
     SITE_URL,
-    SITE_LOGO
 )
 
 # Random key generator
