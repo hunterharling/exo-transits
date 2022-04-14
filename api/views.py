@@ -11,13 +11,10 @@ from .models import (
 
 # Django imports
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
 from django.middleware.csrf import get_token
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
-from django.utils.timezone import activate
 from django.utils.html import strip_tags
 import pytz
 
