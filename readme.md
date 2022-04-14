@@ -23,7 +23,7 @@ cd exotransits/exotransits
 pip install -r requirements.txt
 ```
 
-NPM/React:
+ReactJS:
 ```bash
 npm i
 npm run build
