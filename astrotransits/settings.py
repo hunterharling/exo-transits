@@ -19,7 +19,6 @@ DEBUG = (os.environ.get('DEBUG') == "True")
 
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.232']
-    SECRET_KEY = 'zqm=+^b#-6xy)fl9jqgksv%a0*5@^um7wihfzox+1)dz%_#5du'
     
 else:
     ALLOWED_HOSTS = [
@@ -27,7 +26,8 @@ else:
         'www.exotransits.com',
         'exotransits.herokuapp.com'
     ]
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # Application definition
