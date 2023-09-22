@@ -1,6 +1,6 @@
 # Exo Transits
 
-An exoplanet visualizer and calendar for astronomers.
+An exoplanet transit visualizer and predictor for astronomers.
 
 ## Features
 - Transits
